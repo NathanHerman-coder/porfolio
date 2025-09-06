@@ -61,8 +61,6 @@ $RECYCLE.BIN/
 # Images / médias
 # ==============================
 # Ignorer les images temporaires générées, mais garder ton dossier assets/images
-*.png
-*.jpg
 *.jpeg
 *.gif
 *.svg
