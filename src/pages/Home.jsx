@@ -7,7 +7,7 @@ const Home = () => {
       
       {/* Hero Section */}
       <div className="text-center max-w-3xl mb-16">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fadeIn">
+        <h1 className="text-5xl md:text-2xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 animate-fadeIn">
           Nathan Herman RANTOANDRIATIANA
         </h1>
         <p className="text-xl md:text-2xl font-light mb-6 animate-fadeIn delay-200">
