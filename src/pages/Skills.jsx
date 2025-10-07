@@ -1,69 +1,77 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import SkillsCard from "../components/SkillsCard";
 
 const Skills = () => {
   return (
-    <div className="bg-gray-700 min-h-screen py-12 px-6">
-      {/* Introduction */}
-      <div className="text-gray-200 max-w-4xl mx-auto mb-16 px-4 py-8">
-  <h1 className="text-2xl md:text-3xl font-bold text-center mb-4">
-    Passionné par le développement informatique, j'aime créer des solutions web et mobiles qui font la différence.
-  </h1>
-  <h2 className="text-xl md:text-2xl font-light text-center">
-    Mon objectif : combiner design, performance et expérience utilisateur pour chaque projet.
-  </h2>
-  <h3 className="text-lg md:text-xl font-medium text-center mt-4">
-    Voici les technologies que je maîtrise :
-  </h3>
-</div>
+    <div className="relative bg-gradient-to-br from-gray-950 via-gray-900 to-gray-800 text-gray-100 min-h-screen py-16 px-6 overflow-hidden">
 
+      {/* ==== Halo lumineux de fond ==== */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 left-1/3 w-72 h-72 bg-blue-600/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/3 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
 
-      {/* Skills Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto mb-12">
-        <SkillsCard
-          name="JavaScript"
-          description="Je maîtrise le vanilla JavaScript. Je peux créer des applications web interactives et dynamiques avec."
+      {/* ==== Introduction ==== */}
+      <div className="text-gray-200 max-w-4xl mx-auto mb-16 px-4 py-8 text-center">
+        <h1 className="text-2xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+          Passionné par le développement informatique 💻
+        </h1>
+        <h2 className="text-lg md:text-xl font-light mb-4 text-gray-300">
+          J’aime concevoir des solutions web et mobiles qui allient design, performance et expérience utilisateur.
+        </h2>
+        <h3 className="text-md md:text-lg font-medium mt-4 text-gray-400">
+          Voici les technologies que je maîtrise :
+        </h3>
+      </div>
+
+      {/* ==== Grille des compétences ==== */}
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto mb-16">
+        <SkillsCard 
+          name="JavaScript" 
+          description="Création d’applications web interactives et dynamiques avec JavaScript pur." 
         />
         <SkillsCard 
-  name="React" 
-  description="Création d’interfaces web dynamiques et responsives, utilisation de hooks et gestion d’état." 
-/>
-<SkillsCard 
-  name="Node.js & Express" 
-  description="Création d’API RESTful, gestion des routes et des middlewares." 
-/>
-<SkillsCard 
-  name="PostgreSQL" 
-  description="Conception de bases de données relationnelles et requêtes SQL." 
-/>
-<SkillsCard 
-  name="Git & GitHub" 
-  description="Gestion de versions, collaboration et déploiement de projets." 
-/>
-<SkillsCard 
-  name="TailwindCSS" 
-  description="Stylisation rapide et responsive des composants web." 
-/>
-
-        <SkillsCard
-          name="Python"
-          description="Bases du langage Python, librairies de calcul/statistiques, visualisation des données et framework web Django."
+          name="React" 
+          description="Développement d’interfaces dynamiques et responsives avec hooks et gestion d’état." 
         />
-        <SkillsCard
-          name="Java"
-          description="Bases de la POO avec Java, interfaces graphiques JavaFX et JFrame, backend avec Spring."
+        <SkillsCard 
+          name="Node.js & Express" 
+          description="Création d’API RESTful, gestion des routes et middlewares pour le backend." 
         />
-        <SkillsCard
-          name="C/C++"
-          description="Langage maternel en programmation. Réalisation de projets avec C/C++, maîtrise de GTK et Qt."
+        <SkillsCard 
+          name="PostgreSQL" 
+          description="Conception et manipulation de bases de données relationnelles performantes." 
+        />
+        <SkillsCard 
+          name="Git & GitHub" 
+          description="Gestion de versions, collaboration en équipe et intégration continue." 
+        />
+        <SkillsCard 
+          name="TailwindCSS" 
+          description="Stylisation rapide, moderne et responsive de composants web." 
+        />
+        <SkillsCard 
+          name="Python" 
+          description="Développement backend avec Django, automatisation et analyse de données." 
+        />
+        <SkillsCard 
+          name="Java" 
+          description="Programmation orientée objet, JavaFX, et bases du framework Spring Boot." 
+        />
+        <SkillsCard 
+          name="C/C++" 
+          description="Langage fondamental pour la performance, utilisation de GTK et Qt pour interfaces natives." 
         />
       </div>
 
-      {/* Call to Action */}
+      {/* ==== Call To Action ==== */}
       <div className="flex justify-center">
-        <button className="bg-blue-600 text-gray-200 px-6 py-3 rounded-lg hover:bg-blue-500 transition">
-          Voir mes Projets
-        </button>
+        <Link to="/project">
+          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-blue-500/30 hover:scale-105 transition">
+            Voir mes projets 🚀
+          </button>
+        </Link>
       </div>
     </div>
   );
